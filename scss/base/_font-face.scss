@@ -7,7 +7,7 @@ $fonts: (
 @each $name, $value in $fonts {
   @font-face {
     font-family: "Outfit";
-    src: url(../fonts/static/Outfit-#{$name}.ttf);
+    src: url("/fonts/static/Outfit-#{$name}.ttf");
     font-weight: #{$value};
   }
 }

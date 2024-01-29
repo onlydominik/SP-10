@@ -18,5 +18,9 @@
 
   & span {
     color: var(--clr-white-100);
+    &:hover {
+      color: var(--clr-accent-100);
+      cursor: pointer;
+    }
   }
 }

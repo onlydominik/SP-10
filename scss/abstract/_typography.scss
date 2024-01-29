@@ -1,6 +1,10 @@
 .card__title {
   color: var(--clr-white-100);
   font-weight: var(--fw-600);
+  &:hover {
+    color: var(--clr-accent-100);
+    cursor: pointer;
+  }
 }
 
 .card__description {

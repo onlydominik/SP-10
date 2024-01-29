@@ -6,11 +6,16 @@
   --clr-white-100: hsl(0, 0%, 100%);
   --clr-primary-100: hsl(215, 51%, 70%);
   --clr-accent-100: hsl(178, 100%, 50%);
+  --clr-accent-200: hsla(178, 100%, 50%, 0.4);
 }
 
 .card__title {
   color: var(--clr-white-100);
   font-weight: var(--fw-600);
+}
+.card__title:hover {
+  color: var(--clr-accent-100);
+  cursor: pointer;
 }
 
 .card__description {
@@ -20,17 +25,17 @@
 
 @font-face {
   font-family: "Outfit";
-  src: url(../fonts/static/Outfit-Light.ttf);
+  src: url("/fonts/static/Outfit-Light.ttf");
   font-weight: 300;
 }
 @font-face {
   font-family: "Outfit";
-  src: url(../fonts/static/Outfit-Regular.ttf);
+  src: url("/fonts/static/Outfit-Regular.ttf");
   font-weight: 400;
 }
 @font-face {
   font-family: "Outfit";
-  src: url(../fonts/static/Outfit-Bold.ttf);
+  src: url("/fonts/static/Outfit-SemiBold.ttf");
   font-weight: 600;
 }
 :root {
@@ -106,9 +111,34 @@ img {
   box-shadow: 15px 25px 15px var(--clr-neutral-400), -15px 25px 15px var(--clr-neutral-400);
 }
 
-.card img {
-  border-radius: 5px;
-  margin-bottom: 0.4rem;
+.card__img img {
+  border-radius: 9px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.card__img {
+  position: relative;
+  width: 100%;
+  max-height: 16rem;
+}
+.card__img:after {
+  content: url(/images/icon-view.svg);
+  background: var(--clr-accent-200);
+  background-size: 16rem;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inset: 0;
+  cursor: pointer;
+  border-radius: 9px;
+  transition: all 200ms ease;
+  opacity: 0;
+}
+
+.card__img:hover:after {
+  opacity: 1;
 }
 
 .nft-data {
@@ -122,7 +152,7 @@ img {
 }
 .nft-data p:before {
   content: "";
-  background: url(../../images/icon-ethereum.svg) center no-repeat;
+  background: url("/images/icon-ethereum.svg") center no-repeat;
   background-size: auto 1rem;
   padding-left: 1rem;
   padding-right: 0.5rem;
@@ -133,7 +163,7 @@ img {
 }
 .nft-data small:before {
   content: "";
-  background: url(../../images/icon-clock.svg) center no-repeat;
+  background: url("/images/icon-clock.svg") center no-repeat;
   background-size: auto 1rem;
   padding-left: 1rem;
   padding-right: 0.5rem;
@@ -160,6 +190,10 @@ img {
 .author span {
   color: var(--clr-white-100);
 }
+.author span:hover {
+  color: var(--clr-accent-100);
+  cursor: pointer;
+}
 
 .flex {
   display: flex;
@@ -174,7 +208,7 @@ img {
 body {
   height: 100vh;
   background-color: var(--clr-neutral-300);
-  font-family: "Outfit", sans-serif;
+  font-family: "Outfit";
 }
 
 /*

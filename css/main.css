@@ -25,17 +25,17 @@
 
 @font-face {
   font-family: "Outfit";
-  src: url("/fonts/static/Outfit-Light.ttf");
+  src: url("../fonts/static/Outfit-Light.ttf");
   font-weight: 300;
 }
 @font-face {
   font-family: "Outfit";
-  src: url("/fonts/static/Outfit-Regular.ttf");
+  src: url("../fonts/static/Outfit-Regular.ttf");
   font-weight: 400;
 }
 @font-face {
   font-family: "Outfit";
-  src: url("/fonts/static/Outfit-SemiBold.ttf");
+  src: url("../fonts/static/Outfit-SemiBold.ttf");
   font-weight: 600;
 }
 :root {
@@ -57,7 +57,9 @@
   font-size: 100%;
 }
 
-*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+*:where(
+    :not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)
+  ) {
   all: unset;
   display: revert;
 }
@@ -89,14 +91,14 @@ img {
 /* revert for bug in Chromium browsers
    - fix for the content editable attribute will work properly.
    - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
-:where([contenteditable]:not([contenteditable=false])) {
+:where([contenteditable]:not([contenteditable="false"])) {
   -moz-user-modify: read-write;
   -webkit-user-modify: read-write;
   overflow-wrap: break-word;
 }
 
 /* apply back the draggable feature - exist only in Chromium and Safari */
-:where([draggable=true]) {
+:where([draggable="true"]) {
   -webkit-user-drag: element;
 }
 
@@ -108,7 +110,8 @@ img {
   border-radius: 10px;
   align-items: start !important;
   gap: 1rem;
-  box-shadow: 15px 25px 15px var(--clr-neutral-400), -15px 25px 15px var(--clr-neutral-400);
+  box-shadow: 15px 25px 15px var(--clr-neutral-400),
+    -15px 25px 15px var(--clr-neutral-400);
 }
 
 .card__img img {
@@ -123,7 +126,7 @@ img {
   max-height: 16rem;
 }
 .card__img:after {
-  content: url(/images/icon-view.svg);
+  content: url(../images/icon-view.svg);
   background: var(--clr-accent-200);
   background-size: 16rem;
   position: absolute;
@@ -152,7 +155,7 @@ img {
 }
 .nft-data p:before {
   content: "";
-  background: url("/images/icon-ethereum.svg") center no-repeat;
+  background: url("../images/icon-ethereum.svg") center no-repeat;
   background-size: auto 1rem;
   padding-left: 1rem;
   padding-right: 0.5rem;
@@ -163,7 +166,7 @@ img {
 }
 .nft-data small:before {
   content: "";
-  background: url("/images/icon-clock.svg") center no-repeat;
+  background: url("../images/icon-clock.svg") center no-repeat;
   background-size: auto 1rem;
   padding-left: 1rem;
   padding-right: 0.5rem;
@@ -210,17 +213,5 @@ body {
   background-color: var(--clr-neutral-300);
   font-family: "Outfit";
 }
-
-/*
-p::before {
-  content: "";
-  background: url("../images/icon-clock.svg") center no-repeat;
-  padding-right: 2rem;
-}
-
-p {
-  margin-left: -0.5rem;
-}
-*/
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,21 @@
+@use "./scss/abstract/" as *;
+@use "./scss/base/" as *;
+@use "./scss/components/" as *;
+@use "./scss/utilities/" as *;
+
+body {
+  height: 100vh;
+  background-color: var(--clr-neutral-300);
+  font-family: "Outfit", sans-serif;
+}
+/*
+p::before {
+  content: "";
+  background: url("../images/icon-clock.svg") center no-repeat;
+  padding-right: 2rem;
+}
+
+p {
+  margin-left: -0.5rem;
+}
+*/

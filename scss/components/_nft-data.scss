@@ -1,0 +1,29 @@
+.nft-data {
+  width: 100%;
+  justify-content: space-between !important;
+  font-size: var(--fs-400);
+  & p {
+    color: var(--clr-accent-100);
+    margin-left: -0.5rem;
+    &:before {
+      content: "";
+      background: url(../../images/icon-ethereum.svg) center no-repeat;
+      background-size: auto 1rem;
+      padding-left: 1rem;
+      padding-right: 0.5rem;
+    }
+  }
+
+  & small {
+    color: var(--clr-primary-100);
+    font-weight: var(--fw-300);
+
+    &:before {
+      content: "";
+      background: url(../../images/icon-clock.svg) center no-repeat;
+      background-size: auto 1rem;
+      padding-left: 1rem;
+      padding-right: 0.5rem;
+    }
+  }
+}

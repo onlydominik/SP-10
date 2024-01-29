@@ -1,0 +1,26 @@
+$colors: (
+  "neutral": (
+    100: hsl(215, 32%, 27%),
+    200: hsl(216, 50%, 16%),
+    300: hsl(217, 54%, 11%),
+    400: hsl(216, 53%, 10%),
+  ),
+  "white": (
+    100: hsl(0, 0%, 100%),
+  ),
+  "primary": (
+    100: hsl(215, 51%, 70%),
+  ),
+  "accent": (
+    100: hsl(178, 100%, 50%),
+  ),
+);
+
+:root {
+  // COLORS //
+  @each $category, $subcategory in $colors {
+    @each $name, $value in $subcategory {
+      --clr-#{$category}-#{$name}: #{$value};
+    }
+  }
+}

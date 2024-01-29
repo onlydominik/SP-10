@@ -1,0 +1,192 @@
+:root {
+  --clr-neutral-100: hsl(215, 32%, 27%);
+  --clr-neutral-200: hsl(216, 50%, 16%);
+  --clr-neutral-300: hsl(217, 54%, 11%);
+  --clr-neutral-400: hsl(216, 53%, 10%);
+  --clr-white-100: hsl(0, 0%, 100%);
+  --clr-primary-100: hsl(215, 51%, 70%);
+  --clr-accent-100: hsl(178, 100%, 50%);
+}
+
+.card__title {
+  color: var(--clr-white-100);
+  font-weight: var(--fw-600);
+}
+
+.card__description {
+  color: var(--clr-primary-100);
+  font-weight: var(--fw-300);
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url(../fonts/static/Outfit-Light.ttf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Outfit";
+  src: url(../fonts/static/Outfit-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Outfit";
+  src: url(../fonts/static/Outfit-Bold.ttf);
+  font-weight: 600;
+}
+:root {
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-600: 600;
+  --fs-400: 0.875rem;
+  --fs-500: 1rem;
+  --fs-600: 1.0625rem;
+  --fs-700: 1.25rem;
+  --fs-900: 3rem;
+}
+
+/***
+    The new CSS reset - version 1.11.2 (last updated 15.11.2023)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+:root {
+  font-size: 100%;
+}
+
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Fix mobile Safari increase font-size on landscape mode */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
+}
+
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly.
+   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+:where([contenteditable]:not([contenteditable=false])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable=true]) {
+  -webkit-user-drag: element;
+}
+
+.card {
+  width: clamp(13rem, 80%, 18rem);
+  flex-shrink: 0;
+  background-color: var(--clr-neutral-200);
+  padding: 1rem;
+  border-radius: 10px;
+  align-items: start !important;
+  gap: 1rem;
+  box-shadow: 15px 25px 15px var(--clr-neutral-400), -15px 25px 15px var(--clr-neutral-400);
+}
+
+.card img {
+  border-radius: 5px;
+  margin-bottom: 0.4rem;
+}
+
+.nft-data {
+  width: 100%;
+  justify-content: space-between !important;
+  font-size: var(--fs-400);
+}
+.nft-data p {
+  color: var(--clr-accent-100);
+  margin-left: -0.5rem;
+}
+.nft-data p:before {
+  content: "";
+  background: url(../../images/icon-ethereum.svg) center no-repeat;
+  background-size: auto 1rem;
+  padding-left: 1rem;
+  padding-right: 0.5rem;
+}
+.nft-data small {
+  color: var(--clr-primary-100);
+  font-weight: var(--fw-300);
+}
+.nft-data small:before {
+  content: "";
+  background: url(../../images/icon-clock.svg) center no-repeat;
+  background-size: auto 1rem;
+  padding-left: 1rem;
+  padding-right: 0.5rem;
+}
+
+.author {
+  width: 100%;
+  justify-content: start !important;
+  gap: 0.75rem;
+  font-size: var(--fs-400);
+  padding-top: 1rem;
+  margin-bottom: 0.5rem;
+  border-top: 1px solid var(--clr-neutral-100);
+}
+.author img {
+  width: 1.7rem;
+  border: 1.5px solid white;
+  border-radius: 50%;
+}
+.author p {
+  font-weight: var(--fw-300);
+  color: var(--clr-primary-100);
+}
+.author span {
+  color: var(--clr-white-100);
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex--column {
+  flex-direction: column;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--clr-neutral-300);
+  font-family: "Outfit", sans-serif;
+}
+
+/*
+p::before {
+  content: "";
+  background: url("../images/icon-clock.svg") center no-repeat;
+  padding-right: 2rem;
+}
+
+p {
+  margin-left: -0.5rem;
+}
+*/
+
+/*# sourceMappingURL=main.css.map */

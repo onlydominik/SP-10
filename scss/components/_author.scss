@@ -1,0 +1,22 @@
+.author {
+  width: 100%;
+  justify-content: start !important;
+  gap: 0.75rem;
+  font-size: var(--fs-400);
+  padding-top: 1rem;
+  margin-bottom: 0.5rem;
+  border-top: 1px solid var(--clr-neutral-100);
+  & img {
+    width: 1.7rem;
+    border: 1.5px solid white;
+    border-radius: 50%;
+  }
+  & p {
+    font-weight: var(--fw-300);
+    color: var(--clr-primary-100);
+  }
+
+  & span {
+    color: var(--clr-white-100);
+  }
+}
